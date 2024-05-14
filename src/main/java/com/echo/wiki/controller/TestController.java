@@ -2,6 +2,8 @@ package com.echo.wiki.controller;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 /**
  * ClassName: TestController
  * Package: IntelliJ IDEA
@@ -19,5 +21,11 @@ public class TestController {
     //@RequestMapping(value = "/user/1", method = RequestMethod.DELETE)
     public String hello() {
         return "Hello World";
+    }
+
+
+    @PostMapping("/hello/post")
+    public String helloPost(String name) {
+        return "Hello World! Post, " + name;
     }
 }
