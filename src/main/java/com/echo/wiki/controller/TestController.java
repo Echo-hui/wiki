@@ -2,7 +2,6 @@ package com.echo.wiki.controller;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
 
 /**
  * ClassName: TestController
