@@ -1,5 +1,6 @@
 package com.echo.wiki.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class TestController {
 
+    @Value("${test.hello:TEST}")
+    private String testHello;
     @RequestMapping("/hello")
     //@GetMapping("/hello")
     //@PostMapping
@@ -19,7 +22,7 @@ public class TestController {
     //@RequestMapping(value = "/user/1", method = RequestMethod.GET)
     //@RequestMapping(value = "/user/1", method = RequestMethod.DELETE)
     public String hello() {
-        return "Hello World";
+        return "Hello World!" + testHello;
     }
 
 
